@@ -94,6 +94,7 @@ The local runtime is intended to be frequently started, stopped and torn down, f
 To start the web app, run:
 
 Copy
+
     composer-playground
 It will typically open your browser automatically, at the following address: http://localhost:8080/login
 
