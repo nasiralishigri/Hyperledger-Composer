@@ -62,29 +62,44 @@ Copy
 mkdir ~/fabric-dev-servers && cd ~/fabric-dev-servers
 
 curl -O https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.tar.gz
+
+
 tar -xvf fabric-dev-servers.tar.gz
+
 A zip is also available if you prefer: just replace the .tar.gz file with fabric-dev-servers.zip and the tar -xvf command with a unzip command in the preceding snippet.
 
-Use the scripts you just downloaded and extracted to download a local Hyperledger Fabric v1.2 runtime:
+   #    Use the scripts you just downloaded and extracted to download a local Hyperledger Fabric v1.2 runtime:
 
 Copy
-cd ~/fabric-dev-servers
-export FABRIC_VERSION=hlfv12
-./downloadFabric.sh
+
+      cd ~/fabric-dev-servers
+      
+     export FABRIC_VERSION=hlfv12
+     
+       ./downloadFabric.sh
+
+
+
+
 Congratulations, you've now installed everything required for the typical Developer Environment. Read on to learn some of the most common things you'll do with this environment to develop and test your Blockchain Business Networks.
 
 # Controlling your dev environment
+
 Starting and stopping Hyperledger Fabric
 You control your runtime using a set of scripts which you'll find in ~/fabric-dev-servers if you followed the suggested defaults.
 
 The first time you start up a new runtime, you'll need to run the start script, then generate a PeerAdmin card:
 
 Copy
+
+
     cd ~/fabric-dev-servers
     export FABRIC_VERSION=hlfv12
     ./startFabric.sh
     ./createPeerAdminCard.sh
 You can start and stop your runtime using ~/fabric-dev-servers/stopFabric.sh, and start it again with ~/fabric-dev-servers/startFabric.sh.
+
+
 
 At the end of your development session, you run ~/fabric-dev-servers/stopFabric.sh and then ~/fabric-dev-servers/teardownFabric.sh. Note that if you've run the teardown script, the next time you start the runtime, you'll need to create a new PeerAdmin card just like you did on first time startup.
 
@@ -95,7 +110,10 @@ To start the web app, run:
 
 Copy
 
+
     composer-playground
+    
+    
 It will typically open your browser automatically, at the following address: http://localhost:8080/login
 
 You should see the PeerAdmin@hlfv1 Card you created with the createPeerAdminCard script on your "My Business Networks" screen in the web app: if you don't see this, you may not have correctly started up your runtime!
@@ -110,6 +128,7 @@ Appendix: destroy a previous setup
 If you've previously used an older version of Hyperledger Composer and are now setting up a new install, you may want to kill and remove all previous Docker containers, which you can do with these commands:
 
 Copy
+
     docker kill $(docker ps -q)
     docker rm $(docker ps -aq)
     docker rmi $(docker images dev-* -q)
