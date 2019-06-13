@@ -21,7 +21,8 @@ Note that you should not use su or sudo for the following npm commands.
 
    Copy
 
- @     npm install -g composer-cli@0.20
+    npm install -g composer-cli@0.20
+    
    # Utility for running a REST Server on your machine to expose your business networks as RESTful APIs:
 
 Copy
@@ -29,12 +30,14 @@ Copy
    # Useful utility for generating application assets:
 
 Copy
-@  npm install -g generator-hyperledger-composer@0.20
+
+     npm install -g generator-hyperledger-composer@0.20
   
  @  Yeoman is a tool for generating applications, which utilises generator-hyperledger-composer:
 
 Copy
-@  npm install -g yo
+
+      npm install -g yo
 
 
 # Step 2: Install Playground
@@ -44,11 +47,15 @@ Copy
 
 Copy
 
-npm install -g composer-playground@0.20
+      npm install -g composer-playground@0.20
+
+
 # Step 3: Set up your IDE
 Whilst the browser app can be used to work on your Business Network code, most users will prefer to work in an IDE. Our favourite is VSCode, because a Composer extension is available.
 
-Install VSCode from this URL: https://code.visualstudio.com/download
+Install VSCode from this             
+                                      
+         URL: https://code.visualstudio.com/download
 
 Open VSCode, go to Extensions, then search for and install the Hyperledger Composer extension from the Marketplace.
 
@@ -59,12 +66,11 @@ In a directory of your choice (we will assume ~/fabric-dev-servers), get the .ta
 
 Copy
 
-mkdir ~/fabric-dev-servers && cd ~/fabric-dev-servers
+       mkdir ~/fabric-dev-servers && cd ~/fabric-dev-servers
 
-curl -O https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.tar.gz
+       curl -O https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.tar.gz
 
-
-tar -xvf fabric-dev-servers.tar.gz
+       tar -xvf fabric-dev-servers.tar.gz
 
 A zip is also available if you prefer: just replace the .tar.gz file with fabric-dev-servers.zip and the tar -xvf command with a unzip command in the preceding snippet.
 
