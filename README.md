@@ -2,7 +2,7 @@
 
 
 # Prerequisites
- 1. cURL — latest version
+ 1. CURL — latest version
  2. Docker — version 17.06.2-ce or greater
  3. Docker Compose — version 1.14.0 or greater
  4. Golang — version 1.11.x
