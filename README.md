@@ -11,9 +11,9 @@
  7. Python 2.7
 
   # Installing components
-    # Step 1: Install the CLI tools
-      There are a few useful CLI tools for Composer developers. The most important one is composer-cli, which contains all 
-      the esential operations, so we'll install that first. Next, we'll also pick up generator-hyperledger-composer, composer       rest- server and Yeoman. Those last 3 are not core parts of the development environment, but they'll be useful if             you're  following the tutorials or developing applications that interact with your Business Network, so we'll get them        installed now.
+Step 1: Install the CLI tools
+  There are a few useful CLI tools for Composer developers. The most important one is composer-cli, which contains all 
+  the esential operations, so we'll install that first. Next, we'll also pick up generator-hyperledger-composer, composer     rest- server and Yeoman. Those last 3 are not core parts of the development environment, but they'll be useful if           you're  following the tutorials or developing applications that interact with your Business Network, so we'll get them        installed now.
 
 Note that you should not use su or sudo for the following npm commands.
 
@@ -103,7 +103,11 @@ Copy
     export FABRIC_VERSION=hlfv12
     ./startFabric.sh
     ./createPeerAdminCard.sh
-You can start and stop your runtime using ~/fabric-dev-servers/stopFabric.sh, and start it again with ~/fabric-dev-servers/startFabric.sh.
+You can start and stop your runtime using
+
+     ~/fabric-dev-servers/stopFabric.sh, 
+     and start it again with 
+     ~/fabric-dev-servers/startFabric.sh.
 
 
 
